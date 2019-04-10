@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="__CSS__base.css">
+	<link rel="stylesheet" type="text/css" href="__CSS__main.css">
+	<script type="text/javascript" src="__JS__jquery-1.12.1.min.js"></script>
+</head>
+<body class="pbtm_45 ptop_45 bgcolor">
+<div class="wrap_bd">
+	<div class="dflex topbox1 bgfff">
+		<a href="#" class="on">完整权益</a>
+		<a href="#">我的收藏</a>
+	</div>
+	<div class="maincontent" style='padding:10px 20px;'>
+		<form action="" method="post" class="dflex searchtop items">
+			<input type="text" placeholder="从这里搜索权益" class="txt flex1" />
+			<button class="btn"></button>
+		</form>
+		<div class="dflex justify termsuser" style="color:#f6a829;"><p>如果您第一次使用，请务必阅读交易细则</p><span class="icon"></span></div>
+		<div class="termususercontent">
+			<p style="white-space: pre;">{$by_laws.by_laws}</p>
+		</div>
+		<dl class="sellshoplist">
+			<dt class="dflex items">
+				<div class="flex1 dflex items dv">咖啡券<span class="icon"></span></div>
+				<span class="xx"></span>
+			</dt>
+			<dd class="bgfff" data-status="1">
+				<div class="bx">
+					<div href="" class="dflex items">
+						<a class="flex1">太平洋中杯|招商</a>
+						<span class="price">&yen;11.00</span>
+						<span class="xixi"></span>
+					</div>
+				</div>
+				<div class="bx">
+					<div href="" class="dflex items">
+						<a class="flex1">太平洋中杯|招商</a>
+						<span class="price">&yen;11.00</span>
+						<span class="xixi"></span>
+					</div>
+				</div>
+				<div class="bx">
+					<div href="" class="dflex items">
+						<a class="flex1">太平洋中杯|招商</a>
+						<span class="price">&yen;11.00</span>
+						<span class="xixi"></span>
+					</div>
+				</div>
+				<div class="bx">
+					<div href="" class="dflex items">
+						<a class="flex1">太平洋中杯|招商</a>
+						<span class="price">&yen;11.00</span>
+						<span class="xixi"></span>
+					</div>
+				</div>
+			</dd>
+		</dl>
+		<dl class="sellshoplist">
+			<dt class="dflex items">
+				<div class="flex1 dflex items dv">咖啡券<span class="icon"></span></div>
+				<span class="xx"></span>
+			</dt>
+			<dd class="bgfff" data-status="1">
+				<div class="bx">
+					<div href="" class="dflex items">
+						<a class="flex1">太平洋中杯|招商</a>
+						<span class="price">&yen;11.00</span>
+						<span class="xixi"></span>
+					</div>
+				</div>
+				<div class="bx">
+					<div href="" class="dflex items">
+						<a class="flex1">太平洋中杯|招商</a>
+						<span class="price">&yen;11.00</span>
+						<span class="xixi"></span>
+					</div>
+				</div>
+				<div class="bx">
+					<div href="" class="dflex items">
+						<a class="flex1">太平洋中杯|招商</a>
+						<span class="price">&yen;11.00</span>
+						<span class="xixi"></span>
+					</div>
+				</div>
+				<div class="bx">
+					<div href="" class="dflex items">
+						<a class="flex1">太平洋中杯|招商</a>
+						<span class="price">&yen;11.00</span>
+						<span class="xixi"></span>
+					</div>
+				</div>
+			</dd>
+		</dl>
+	</div>
+	<div class="dflex bottom_box1">
+		<a href="#" class="dflex justify on"><div>权益交易</div></a>
+		<a href="#" class="dflex justify"><div>我的</div></a>
+	</div>
+</div>
+<script type="text/javascript">
+$(".sellshoplist dt .dv").click(function(){
+	var status=$(this).parents(".sellshoplist").find("dd").data('status');
+	if(status==1){
+		$(this).parents(".sellshoplist").find("dd").data('status',0);
+		$(this).parents(".sellshoplist").find("dd").stop().slideUp();
+		$(this).find(".icon").addClass("on");
+	}else{
+		$(this).parents(".sellshoplist").find("dd").data('status',1);
+		$(this).parents(".sellshoplist").find("dd").stop().slideDown();
+		$(this).find(".icon").removeClass("on");
+	}
+});
+$('.sellshoplist .xx').click(function(){
+	$(this).parents(".sellshoplist").find(".xixi").show();
+});
+$('.sellshoplist .xixi').click(function(){
+	$(this).addClass("active");
+});
+var termstatus=0;
+$(".termsuser").click(function(){
+	if(termstatus==0){
+		termstatus=1;
+		$(".termususercontent").stop().slideDown();
+	}else{
+		termstatus=0;
+		$(".termususercontent").stop().slideUp();
+	}
+});
+</script>
+</body>
+</html>
